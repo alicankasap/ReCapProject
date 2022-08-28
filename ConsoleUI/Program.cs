@@ -13,6 +13,16 @@ namespace ConsoleUI
             CarManager carManager = new CarManager(new EfCarDal());
             BrandManager brandManager = new BrandManager(new EfBrandDal());
             ColorManager colorManager = new ColorManager(new EfColorDal());
+            UserManager userManager = new UserManager(new EfUserDal());
+
+            //var result = userManager.Add(new User { FirstName = "Ruşen", LastName = "Kasap", Email = "ruşenkasap@gmail.com", Password = "123456" });
+            //Console.WriteLine(result.Message);
+
+
+            foreach (var user in userManager.GetAll().Data)
+            {
+                Console.WriteLine(user.FirstName + " " + user.LastName);
+            }
 
             //brandManager.Update(new Brand { Id = 1002, Name = "Volvo" });
 
@@ -29,16 +39,16 @@ namespace ConsoleUI
             //    Console.WriteLine(car.CarName + " " + car.BrandName + " " + car.ColorName + " " + car.DailyPrice);
             //}
 
-            var result = colorManager.GetAll();
+            //var result = colorManager.GetAll();
 
-            if (result.Success)
-            {
-                foreach (var color in colorManager.GetAll().Data)
-                {
-                    Console.WriteLine($"Id: {color.Id}   Model: {color.Name}\n");
-                }
-            }
-            Console.WriteLine(result.Message);
+            //if (result.Success)
+            //{
+            //    foreach (var color in colorManager.GetAll().Data)
+            //    {
+            //        Console.WriteLine($"Id: {color.Id}   Model: {color.Name}\n");
+            //    }
+            //}
+            //Console.WriteLine(result.Message);
 
             //foreach (var car in carManager.GetCarsByBrandId(1))
             //{

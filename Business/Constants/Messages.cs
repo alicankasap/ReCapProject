@@ -51,6 +51,21 @@ namespace Business.Constants
 
 
 
+        public static string UserAdded = "Kullanıcı eklendi";
+        public static string UserCouldntAdded = "Kullanıcı eklenemedi";
+
+        public static string UserDeleted = "Kullanıcı silindi";
+        public static string UserCouldntDeleted = "Kullanıcı silinemedi";
+
+        public static string UserUpdated = "Kullanıcı güncellendi";
+        public static string UserCouldntUpdated = "Kullanıcı güncellenemedi";
+
+        public static string UserNameInvalid = "Kullanıcı ismi geçersiz";
+
+        public static string UsersListed = "Kullanıcılar listelendi";
+
+
+
         public static string MaintenanceTime = "Sistem bakımda";
     }
 }
